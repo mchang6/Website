@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
     
     <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>    
+    <script src="https://raw.github.com/mchang6/Website/master/script.js"></script>   
  
   <style>
     body, html 
@@ -120,7 +120,7 @@
 
   <div class="bgimg-2">
     <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Design Your Own Page</span>
+    <span class="border" style="background-color: white;font-size:25px;color: #000000;">Design Your Own Page</span>
     </div>
   </div>
 
@@ -132,7 +132,7 @@
 
   <div class="bgimg-3">
     <div class="caption">
-    <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Chance to Win A Gift Card</span>
+    <span class="border" style="background-color:white;font-size:25px;color: #000000;">Chance to Win A Gift Card</span>
     </div>
   </div>
 
@@ -147,8 +147,24 @@
     <span class="border">Good Luck!</span>
     </div>
   </div>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <script></script>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
+  <script>// When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+     } else {
+       document.getElementById("myBtn").style.display = "none";
+     }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
   </body>
 
 </html>
